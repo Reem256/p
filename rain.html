@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rain</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        
+        #imgchange {
+            margin: 5%;
+            padding: 20px;
+            background-color: #5c6279;
+        }
+        #image {
+            border: 20px solid #000000;
+            margin-bottom: -20%;
+            margin-top: 0%;
+            margin-left: 0%;
+            margin-right: 0%;
+        }
+
+        #c {
+            width: 40px;
+            height: 30px;
+            margin: 5%;
+        }
+        
+    </style>
+
+    <script>
+
+        var images = ["images/r2.JPG", "images/r1.JPG", "images/r3.JPG", "images/r4.JPG", "images/r5.JPG", "images/r6.JPG", "images/r.JPG"];
+        var currentIndex = 0;
+
+        function changeImage() {
+            var imageElement = document.getElementById("image");
+            currentIndex = (currentIndex + 1) % images.length;
+            imageElement.src = images[currentIndex];
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="content">
+    <h1>Beach Photos I took</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="media.html">Media</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <br>
+    <h3>Rain photos.</h3> 
+    <p>Click on the photo to go to the next one.</p>
+
+    <img id="image" src="images/r.JPG" alt="Image" onclick="changeImage()">
+
+</div>
+    <div class="left-navbar">
+        <nav>
+            <a href="media.html"><h4>My Media:</h4></a>
+        <br>
+        <a href="sky.html">Sky</a>
+        <a href="nature.html">Beach</a>
+        <a href="rain.html">Rain</a>
+        </nav>
+    </div>
+
+    <div class="bottom-nav">
+        <nav class="bn">
+          <a href="mailto:U21102831@sharjah.ac.ae"><img id="email" src="other/micon.png" alt="email"><figcaption><strong>Mail</strong><br>@U21102831@sharjah.ac.ae</figcaption></a>
+          <a href="sms:0543223743?body=Hello%20there"><img id="email" src="other/sicon.png" alt="SMS"><figcaption><strong>SMS</strong><br>+971 54 3223743</figcaption></a>
+          <a href="tel:+971543223743"><img id="email" src="other/picon.png" alt="call"><figcaption><strong>Call</strong><br>+971 54 3223743</figcaption></a>
+          <a href="https://www.facebook.com/"><img id="email" src="other/ficon.png" alt="facbook"><figcaption><strong>Facebook</strong><br>U21102831</figcaption></a>
+        </nav>
+    </div>
+</body>
+</html>
