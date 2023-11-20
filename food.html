@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favorite Cartoon</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+        img {
+            margin: 15%;
+            margin-top: 0%;
+        }
+
+        #caption {
+            margin-top: -12%;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+
+    <script>
+        const images = ["images/pasta.png", "images/pizza.webp", "images/salad.png", 
+        "images/burger.png", "images/brownie.webp"];
+
+        const captions = [
+        "Pasta",
+        "Pizza",
+        "Greek Salad",
+        "Burger",
+        "Brownie"
+    ];
+
+        let currentImageIndex = 0;
+
+        function changeImage() {
+        document.getElementById("image").src = images[currentImageIndex];
+        document.getElementById("caption").textContent = captions[currentImageIndex];
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        }
+        setInterval(changeImage, 1200);
+    </script>
+
+</head>
+<body>
+    <div class="content">
+    <h1>Fav Food</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="media.html">Media</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <br>
+    <h3>These are my favorite types of food:</h3>
+
+    <img id="image" src="images/brownie.webp" alt="Image">
+    <figcaption id="caption">Brownie</figcaption>
+</div>
+
+    <div class="left-navbar">
+        <nav>
+            <h2>More About Me:</h2> 
+        <br>
+        <a href="skills.html">Skills & Hobbies</a>
+            <a href="food.html">Favorite <br>Food</a>
+            <a href="me.html">Favorite <br>Cartoon</a>
+            <a href="contact.html">Contact <br>me</a>
+        </nav>
+    </div>
+    
+    <div class="bottom-nav">
+        <nav class="bn">
+          <a href="mailto:U21102831@sharjah.ac.ae"><img id="email" src="other/micon.png" alt="email"><figcaption><strong>Mail</strong><br>@U21102831@sharjah.ac.ae</figcaption></a>
+          <a href="sms:0543223743?body=Hello%20there"><img id="email" src="other/sicon.png" alt="SMS"><figcaption><strong>SMS</strong><br>+971 54 3223743</figcaption></a>
+          <a href="tel:+971543223743"><img id="email" src="other/picon.png" alt="call"><figcaption><strong>Call</strong><br>+971 54 3223743</figcaption></a>
+          <a href="https://www.facebook.com/"><img id="email" src="other/ficon.png" alt="facbook"><figcaption><strong>Facebook</strong><br>U21102831</figcaption></a>
+        </nav>
+    </div>
+</body>
+</html>
